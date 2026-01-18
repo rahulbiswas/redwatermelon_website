@@ -1,0 +1,167 @@
+/* --- Basic Reset & Body --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFF8E7; /* Set a base background color */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    width: 100%;
+    line-height: 0;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-image-wide {
+    display: none; /* Hidden on mobile by default */
+}
+
+.hero-image-tall {
+    display: block; /* Shown on mobile by default */
+}
+
+/* --- Content Sections (About, Games, etc.) --- */
+.content-section {
+    padding: 50px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.content-section p {
+    color: #555;
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+/* --- Team Portraits --- */
+.team-portraits {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.portrait {
+    text-align: center;
+}
+
+.portrait img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.portrait .portrait-name {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    text-align: center !important;
+}
+
+/* --- Specifics for the Games Section --- */
+.game-showcase {
+    margin-top: 20px;
+}
+
+.game-showcase h3 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.game-description {
+    margin: 0 auto 30px auto;
+}
+
+.game-screenshot {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.app-store-link {
+    display: inline-block;
+}
+
+.app-store-badge {
+    height: 50px;
+    width: auto;
+}
+
+/* --- Media Query for Desktop & Wider Screens --- */
+@media (min-width: 768px) {
+    .hero-image-wide {
+        display: block; /* Show the wide image on larger screens */
+    }
+
+    .hero-image-tall {
+        display: none; /* Hide the tall image on larger screens */
+    }
+
+    .game-showcase {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 40px;
+    }
+    
+    .game-info {
+        flex: 1; /* Take up 50% of the space */
+    }
+
+    .game-image-wrapper {
+        flex: 1; /* Take up 50% of the space */
+    }
+    
+    .game-description {
+        margin: 0 0 30px 0; /* Remove auto margin for left alignment */
+    }
+
+    .game-screenshot {
+        margin-bottom: 0; /* Remove margin as it's now side-by-side */
+    }
+}
+
+/* --- Footer --- */
+.main-footer {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #222;
+    color: #aaa;
+}
+
+.main-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+.main-footer .copyright {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
